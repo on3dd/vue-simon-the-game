@@ -1,10 +1,10 @@
 <template>
-	<button :class="buttonClasses" @click="handleClick" ref="button" />
+  <button :class="buttonClasses" @click="handleClick" ref="button" />
 </template>
 
 <script>
 	export default {
-		name: "SimonButton",
+		name: 'SimonButton',
 		props: {
 			idx: {
 				type: Number,
@@ -31,7 +31,7 @@
 
 		computed: {
 			buttonClasses() {
-				return ["simon-button", this.color];
+				return ['simon-button', this.color];
 			},
 		},
 
@@ -39,15 +39,15 @@
 			play() {
 				this.sound.play();
 
-				this.$refs.button.classList.add("active");
+				this.$refs.button.classList.add('active');
 				setTimeout(() => {
-					this.$refs.button.classList.remove("active");
+					this.$refs.button.classList.remove('active');
 				}, 400);
 			},
 
 			handleClick() {
 				this.play();
-				this.$emit("click", this.idx);
+				this.$emit('click', this.idx);
 			},
 		},
 	};

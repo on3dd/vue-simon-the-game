@@ -1,51 +1,51 @@
 <template>
-	<div class="game">
-		<section class="gameboard">
-			<ul class="gameboard__buttons">
-				<li v-for="(item, idx) in layout" :key="idx" class="gameboard__button">
-					<SimonButton
-						:idx="idx"
-						:color="item.color"
-						:name="item.name"
-						ref="button"
-						@click="handleButtonClick"
-					/>
-				</li>
-			</ul>
-		</section>
-		<aside class="sidebar">
-			<section class="play">
-				<h1 class="play__round">Round: {{ round }}</h1>
-				<button class="play__button" @click="init">Start</button>
-				<span v-show="gameover" class="play__result">Sorry, you lost after {{ round }} rounds!</span>
-			</section>
+  <div class="game">
+    <section class="gameboard">
+      <ul class="gameboard__buttons">
+        <li v-for="(item, idx) in layout" :key="idx" class="gameboard__button">
+          <SimonButton
+            :idx="idx"
+            :color="item.color"
+            :name="item.name"
+            ref="button"
+            @click="handleButtonClick"
+          />
+        </li>
+      </ul>
+    </section>
+    <aside class="sidebar">
+      <section class="play">
+        <h1 class="play__round">Round: {{ round }}</h1>
+        <button class="play__button" @click="init">Start</button>
+        <span v-show="gameover" class="play__result">Sorry, you lost after {{ round }} rounds!</span>
+      </section>
 
-			<section class="difficulty">
-				<h2 class="difficulty__heading">Difficulty</h2>
-				<ul class="difficulty__list">
-					<li v-for="(item, idx) in difficultyLevels" :key="idx" class="difficulty__item">
-						<input
-							v-model="difficulty"
-							:value="item.value"
-							:id="`difficulty-${item.value}`"
-							type="radio"
-							class="difficulty__input"
-						/>
-						<label :for="`difficulty-${item.value}`">{{ item.text }}</label>
-					</li>
-				</ul>
-			</section>
-		</aside>
-	</div>
+      <section class="difficulty">
+        <h2 class="difficulty__heading">Difficulty</h2>
+        <ul class="difficulty__list">
+          <li v-for="(item, idx) in difficultyLevels" :key="idx" class="difficulty__item">
+            <input
+              v-model="difficulty"
+              :value="item.value"
+              :id="`difficulty-${item.value}`"
+              type="radio"
+              class="difficulty__input"
+            />
+            <label :for="`difficulty-${item.value}`">{{ item.text }}</label>
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </div>
 </template>
 
 <script>
-	import SimonButton from "@/components/SimonButton";
-	import { layout, difficultyLevels } from "@/shared/constants";
-	import { sleep } from "@/shared/functions";
+	import SimonButton from '@/components/SimonButton';
+	import { layout, difficultyLevels } from '@/shared/constants';
+	import { sleep } from '@/shared/functions';
 
 	export default {
-		name: "Simon",
+		name: 'Simon',
 		components: {
 			SimonButton,
 		},
@@ -56,7 +56,7 @@
 			current: 0,
 			playSequence: [],
 			prevButtonIdx: null,
-			difficulty: "easy",
+			difficulty: 'easy',
 			gameover: false,
 		}),
 
@@ -107,7 +107,7 @@
 				if (!this.round) return;
 
 				const currentIdx = this.playSequence[this.current];
-				
+
 				if (idx === currentIdx) {
 					this.incrementCurrent();
 				} else {
