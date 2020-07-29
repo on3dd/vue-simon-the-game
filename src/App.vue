@@ -1,14 +1,14 @@
 <template>
-	<div id="app">
-		<Simon />
-	</div>
+  <div id="app">
+    <Simon />
+  </div>
 </template>
 
 <script>
-	import Simon from "@/components/Simon";
+	import Simon from '@/components/Simon';
 
 	export default {
-		name: "App",
+		name: 'App',
 		components: {
 			Simon,
 		},
@@ -23,7 +23,7 @@
 	html {
 		color: var(--font-color);
 		font-size: 16px;
-		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 
 	body {
@@ -46,6 +46,13 @@
 		--green-color: hsl(145, 63%, 54%);
 		--green-color-active: hsl(145, 63%, 49%);
 		--green-color-hover: hsl(145, 63%, 44%);
+
+		--smartphone-min-width: 320px;
+		--smartphone-max-width: 480px;
+		--tablet-min-width: 768px;
+		--tablet-max-width: 1024px;
+		--desktop-min-width: 1224px;
+		--large-screen-min-width: 1824px;
 	}
 
 	#app {
@@ -53,5 +60,6 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 100vh;
+    padding: 30px;
 	}
 </style>

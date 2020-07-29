@@ -130,29 +130,47 @@
 <style scoped>
 	.game {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
-	.gameboard {
-		margin-right: 30px;
+	@media screen and (min-width: 1224px) {
+		.game {
+			flex-direction: row;
+		}
+	}
+
+	@media screen and (min-width: 1224px) {
+		.gameboard {
+			margin-right: 3rem;
+		}
 	}
 
 	.gameboard__buttons {
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 500px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 		padding: 0;
 		margin: 0;
-		flex-wrap: wrap;
+		height: 75vw;
+		width: 75vw;
+		max-height: 500px;
+		max-width: 500px;
 		list-style-type: none;
 		border-radius: 50%;
 		box-shadow: 0 2.5px 10px 0 rgba(0, 0, 0, 0.5);
 	}
 
+	@media screen and (min-width: 1224px) {
+		.gameboard {
+			margin-right: 3rem;
+		}
+	}
+
 	.gameboard__button {
 		display: block;
-		height: 250px;
-		width: 250px;
+		height: 100%;
+		width: 100%;
 		overflow: hidden;
 		border: 1rem solid hsl(0, 0%, 100%);
 	}
@@ -183,7 +201,6 @@
 
 	.sidebar {
 		padding: 30px;
-		width: 300px;
 	}
 
 	.play {
@@ -220,5 +237,19 @@
 	.play__result {
 		display: block;
 		margin-top: 1rem;
+	}
+
+	.play,
+	.difficulty {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media screen and (min-width: 1224px) {
+		.play,
+		.difficulty {
+			display: block;
+		}
 	}
 </style>
