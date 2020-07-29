@@ -35,17 +35,17 @@
 		--font-color: hsl(0, 0%, 21%);
 		--heading-color: hsl(0, 0%, 4%);
 		--red-color: hsl(6, 78%, 62%);
-		--red-color-active: hsl(6, 78%, 57%);
-		--red-color-hover: hsl(6, 78%, 52%);
+		--red-color-active: hsl(6, 78%, 52%);
+		--red-color-hover: hsl(6, 78%, 47%);
 		--blue-color: hsl(204, 70%, 58%);
-		--blue-color-active: hsl(204, 70%, 53%);
-		--blue-color-hover: hsl(204, 70%, 48%);
+		--blue-color-active: hsl(204, 70%, 48%);
+		--blue-color-hover: hsl(204, 70%, 43%);
 		--yellow-color: hsl(48, 89%, 55%);
-		--yellow-color-active: hsl(48, 89%, 50%);
-		--yellow-color-hover: hsl(48, 89%, 45%);
+		--yellow-color-active: hsl(48, 89%, 45%);
+		--yellow-color-hover: hsl(48, 89%, 40%);
 		--green-color: hsl(145, 63%, 54%);
-		--green-color-active: hsl(145, 63%, 49%);
-		--green-color-hover: hsl(145, 63%, 44%);
+		--green-color-active: hsl(145, 63%, 44%);
+		--green-color-hover: hsl(145, 63%, 39%);
 
 		--smartphone-min-width: 320px;
 		--smartphone-max-width: 480px;

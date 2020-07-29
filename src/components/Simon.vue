@@ -201,6 +201,7 @@
 
 	.sidebar {
 		padding: 30px;
+		min-width: 270px;
 	}
 
 	.play {
